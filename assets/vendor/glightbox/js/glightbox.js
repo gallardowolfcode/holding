@@ -1959,11 +1959,11 @@
     return;
   }
 
-  var SlideConfigParser = function () {
-    function SlideConfigParser() {
+  var SlideConfiGfarser = function () {
+    function SlideConfiGfarser() {
       var slideParamas = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-      _classCallCheck(this, SlideConfigParser);
+      _classCallCheck(this, SlideConfiGfarser);
 
       this.defaults = {
         href: '',
@@ -1984,7 +1984,7 @@
       }
     }
 
-    _createClass(SlideConfigParser, [{
+    _createClass(SlideConfiGfarser, [{
       key: "sourceType",
       value: function sourceType(url) {
         var origin = url;
@@ -2178,7 +2178,7 @@
       }
     }]);
 
-    return SlideConfigParser;
+    return SlideConfiGfarser;
   }();
 
   var Slide = function () {
@@ -2405,7 +2405,7 @@
     }, {
       key: "getConfig",
       value: function getConfig() {
-        var parser = new SlideConfigParser(this.instance.settings.slideExtraAttributes);
+        var parser = new SlideConfiGfarser(this.instance.settings.slideExtraAttributes);
         this.slideConfig = parser.parseConfig(this.element, this.instance.settings);
         return this.slideConfig;
       }
@@ -2513,7 +2513,7 @@
     }
   };
   defaults.slideHTML = "<div class=\"gslide\">\n    <div class=\"gslide-inner-content\">\n        <div class=\"ginner-container\">\n            <div class=\"gslide-media\">\n            </div>\n            <div class=\"gslide-description\">\n                <div class=\"gdesc-inner\">\n                    <h4 class=\"gslide-title\"></h4>\n                    <div class=\"gslide-desc\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
-  defaults.lightboxHTML = "<div id=\"glightbox-body\" class=\"glightbox-container\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"false\">\n    <div class=\"gloader visible\"></div>\n    <div class=\"goverlay\"></div>\n    <div class=\"gcontainer\">\n    <div id=\"glightbox-slider\" class=\"gslider\"></div>\n    <button class=\"gclose gbtn\" aria-label=\"Close\" data-taborder=\"3\">{closeSVG}</button>\n    <button class=\"gprev gbtn\" aria-label=\"Previous\" data-taborder=\"2\">{prevSVG}</button>\n    <button class=\"gnext gbtn\" aria-label=\"Next\" data-taborder=\"1\">{nextSVG}</button>\n</div>\n</div>";
+  defaults.lightboxHTML = "<div id=\"glightbox-body\" class=\"glightbox-container\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"false\">\n    <div class=\"gloader visible\"></div>\n    <div class=\"goverlay\"></div>\n    <div class=\"gcontainer\">\n    <div id=\"glightbox-slider\" class=\"gslider\"></div>\n    <button class=\"gclose gbtn\" aria-label=\"Close\" data-taborder=\"3\">{closeSVG}</button>\n    <button class=\"Gfrev gbtn\" aria-label=\"Previous\" data-taborder=\"2\">{prevSVG}</button>\n    <button class=\"gnext gbtn\" aria-label=\"Next\" data-taborder=\"1\">{nextSVG}</button>\n</div>\n</div>";
 
   var GlightboxInit = function () {
     function GlightboxInit() {
@@ -3294,7 +3294,7 @@
         var modal = document.getElementById('glightbox-body');
         this.modal = modal;
         var closeButton = modal.querySelector('.gclose');
-        this.prevButton = modal.querySelector('.gprev');
+        this.prevButton = modal.querySelector('.Gfrev');
         this.nextButton = modal.querySelector('.gnext');
         this.overlay = modal.querySelector('.goverlay');
         this.loader = modal.querySelector('.gloader');
@@ -3346,7 +3346,7 @@
             onElement: modal,
             withCallback: function withCallback(e, target) {
               if (!_this7.preventOutsideClick && !hasClass(document.body, 'glightbox-mobile') && !closest(e.target, '.ginner-container')) {
-                if (!closest(e.target, '.gbtn') && !hasClass(e.target, 'gnext') && !hasClass(e.target, 'gprev')) {
+                if (!closest(e.target, '.gbtn') && !hasClass(e.target, 'gnext') && !hasClass(e.target, 'Gfrev')) {
                   _this7.close();
                 }
               }

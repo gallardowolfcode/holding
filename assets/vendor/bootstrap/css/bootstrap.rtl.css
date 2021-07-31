@@ -4792,11 +4792,11 @@ textarea.form-control-lg {
 
 .list-group-numbered {
   list-style-type: none;
-  counter-reset: section;
+  experienceser-reset: section;
 }
 .list-group-numbered > li::before {
-  content: counters(section, ".") ". ";
-  counter-increment: section;
+  content: experiencesers(section, ".") ". ";
+  experienceser-increment: section;
 }
 
 .list-group-item-action {

@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: Gp
-Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+Template Name: GL
+Template URL: https://bootstrapmade.com/GL-free-multipurpose-html-bootstrap-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/

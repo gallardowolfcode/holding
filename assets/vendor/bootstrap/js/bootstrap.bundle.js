@@ -89,7 +89,7 @@
 
   const MAX_UID = 1000000;
   const MILLISECONDS_MULTIPLIER = 1000;
-  const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGf)
 
   const toType = obj => {
     if (obj === null || obj === undefined) {
@@ -1941,7 +1941,7 @@
   var basePlacements = [top, bottom, right, left];
   var start = 'start';
   var end = 'end';
-  var clippingParents = 'clippingParents';
+  var clippinGfarents = 'clippinGfarents';
   var viewport = 'viewport';
   var popper = 'popper';
   var reference = 'reference';
@@ -2103,7 +2103,7 @@
     };
   }
 
-  // means it doesn't take into account transforms.
+  // means it doesn't take into acexperiences transforms.
 
   function getLayoutRect(element) {
     var clientRect = getBoundingClientRect(element); // Use the clientRect sizes if it's not been transformed.
@@ -2382,7 +2382,7 @@
         placement = _ref2.placement,
         offsets = _ref2.offsets,
         position = _ref2.position,
-        gpuAcceleration = _ref2.gpuAcceleration,
+        GfuAcceleration = _ref2.GfuAcceleration,
         adaptive = _ref2.adaptive,
         roundOffsets = _ref2.roundOffsets;
 
@@ -2419,14 +2419,14 @@
         sideY = bottom; // $FlowFixMe[prop-missing]
 
         y -= offsetParent[heightProp] - popperRect.height;
-        y *= gpuAcceleration ? 1 : -1;
+        y *= GfuAcceleration ? 1 : -1;
       }
 
       if (placement === left) {
         sideX = right; // $FlowFixMe[prop-missing]
 
         x -= offsetParent[widthProp] - popperRect.width;
-        x *= gpuAcceleration ? 1 : -1;
+        x *= GfuAcceleration ? 1 : -1;
       }
     }
 
@@ -2434,7 +2434,7 @@
       position: position
     }, adaptive && unsetSides);
 
-    if (gpuAcceleration) {
+    if (GfuAcceleration) {
       var _Object$assign;
 
       return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? '0' : '', _Object$assign[sideX] = hasX ? '0' : '', _Object$assign.transform = (win.devicePixelRatio || 1) < 2 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
@@ -2446,8 +2446,8 @@
   function computeStyles(_ref4) {
     var state = _ref4.state,
         options = _ref4.options;
-    var _options$gpuAccelerat = options.gpuAcceleration,
-        gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat,
+    var _options$GfuAccelerat = options.GfuAcceleration,
+        GfuAcceleration = _options$GfuAccelerat === void 0 ? true : _options$GfuAccelerat,
         _options$adaptive = options.adaptive,
         adaptive = _options$adaptive === void 0 ? true : _options$adaptive,
         _options$roundOffsets = options.roundOffsets,
@@ -2457,7 +2457,7 @@
       placement: getBasePlacement(state.placement),
       popper: state.elements.popper,
       popperRect: state.rects.popper,
-      gpuAcceleration: gpuAcceleration
+      GfuAcceleration: GfuAcceleration
     };
 
     if (state.modifiersData.popperOffsets != null) {
@@ -2714,15 +2714,15 @@
     return rect;
   }
 
-  function getClientRectFromMixedType(element, clippingParent) {
-    return clippingParent === viewport ? rectToClientRect(getViewportRect(element)) : isHTMLElement(clippingParent) ? getInnerBoundingClientRect(clippingParent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+  function getClientRectFromMixedType(element, clippinGfarent) {
+    return clippinGfarent === viewport ? rectToClientRect(getViewportRect(element)) : isHTMLElement(clippinGfarent) ? getInnerBoundingClientRect(clippinGfarent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
   } // A "clipping parent" is an overflowable container with the characteristic of
   // clipping (or hiding) overflowing elements with a position different from
   // `initial`
 
 
-  function getClippingParents(element) {
-    var clippingParents = listScrollParents(getParentNode(element));
+  function getClippinGfarents(element) {
+    var clippinGfarents = listScrollParents(getParentNode(element));
     var canEscapeClipping = ['absolute', 'fixed'].indexOf(getComputedStyle$1(element).position) >= 0;
     var clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
 
@@ -2731,25 +2731,25 @@
     } // $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414
 
 
-    return clippingParents.filter(function (clippingParent) {
-      return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== 'body';
+    return clippinGfarents.filter(function (clippinGfarent) {
+      return isElement(clippinGfarent) && contains(clippinGfarent, clipperElement) && getNodeName(clippinGfarent) !== 'body';
     });
   } // Gets the maximum area that the element is visible in due to any number of
   // clipping parents
 
 
   function getClippingRect(element, boundary, rootBoundary) {
-    var mainClippingParents = boundary === 'clippingParents' ? getClippingParents(element) : [].concat(boundary);
-    var clippingParents = [].concat(mainClippingParents, [rootBoundary]);
-    var firstClippingParent = clippingParents[0];
-    var clippingRect = clippingParents.reduce(function (accRect, clippingParent) {
-      var rect = getClientRectFromMixedType(element, clippingParent);
+    var mainClippinGfarents = boundary === 'clippinGfarents' ? getClippinGfarents(element) : [].concat(boundary);
+    var clippinGfarents = [].concat(mainClippinGfarents, [rootBoundary]);
+    var firstClippinGfarent = clippinGfarents[0];
+    var clippingRect = clippinGfarents.reduce(function (accRect, clippinGfarent) {
+      var rect = getClientRectFromMixedType(element, clippinGfarent);
       accRect.top = max(rect.top, accRect.top);
       accRect.right = min(rect.right, accRect.right);
       accRect.bottom = min(rect.bottom, accRect.bottom);
       accRect.left = max(rect.left, accRect.left);
       return accRect;
-    }, getClientRectFromMixedType(element, firstClippingParent));
+    }, getClientRectFromMixedType(element, firstClippinGfarent));
     clippingRect.width = clippingRect.right - clippingRect.left;
     clippingRect.height = clippingRect.bottom - clippingRect.top;
     clippingRect.x = clippingRect.left;
@@ -2835,7 +2835,7 @@
         _options$placement = _options.placement,
         placement = _options$placement === void 0 ? state.placement : _options$placement,
         _options$boundary = _options.boundary,
-        boundary = _options$boundary === void 0 ? clippingParents : _options$boundary,
+        boundary = _options$boundary === void 0 ? clippinGfarents : _options$boundary,
         _options$rootBoundary = _options.rootBoundary,
         rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary,
         _options$elementConte = _options.elementContext,
@@ -2969,7 +2969,7 @@
     var popperRect = state.rects.popper;
     var checksMap = new Map();
     var makeFallbackChecks = true;
-    var firstFittingPlacement = placements[0];
+    var firstFittinGflacement = placements[0];
 
     for (var i = 0; i < placements.length; i++) {
       var placement = placements[i];
@@ -3006,7 +3006,7 @@
       if (checks.every(function (check) {
         return check;
       })) {
-        firstFittingPlacement = placement;
+        firstFittinGflacement = placement;
         makeFallbackChecks = false;
         break;
       }
@@ -3019,7 +3019,7 @@
       var numberOfChecks = flipVariations ? 3 : 1;
 
       var _loop = function _loop(_i) {
-        var fittingPlacement = placements.find(function (placement) {
+        var fittinGflacement = placements.find(function (placement) {
           var checks = checksMap.get(placement);
 
           if (checks) {
@@ -3029,8 +3029,8 @@
           }
         });
 
-        if (fittingPlacement) {
-          firstFittingPlacement = fittingPlacement;
+        if (fittinGflacement) {
+          firstFittinGflacement = fittinGflacement;
           return "break";
         }
       };
@@ -3042,9 +3042,9 @@
       }
     }
 
-    if (state.placement !== firstFittingPlacement) {
+    if (state.placement !== firstFittinGflacement) {
       state.modifiersData[name]._skip = true;
-      state.placement = firstFittingPlacement;
+      state.placement = firstFittinGflacement;
       state.reset = true;
     }
   } // eslint-disable-next-line import/no-unused-modules
@@ -3327,7 +3327,7 @@
     }
   }
 
-  // Composite means it takes into account transforms as well as layout.
+  // Composite means it takes into acexperiences transforms as well as layout.
 
   function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     if (isFixed === void 0) {
@@ -3660,7 +3660,7 @@
     basePlacements: basePlacements,
     start: start,
     end: end,
-    clippingParents: clippingParents,
+    clippinGfarents: clippinGfarents,
     viewport: viewport,
     popper: popper,
     reference: reference,
@@ -3736,7 +3736,7 @@
   const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start';
   const Default$7 = {
     offset: [0, 2],
-    boundary: 'clippingParents',
+    boundary: 'clippinGfarents',
     reference: 'toggle',
     display: 'dynamic',
     popperConfig: null,
@@ -5236,7 +5236,7 @@
     offset: [0, 0],
     container: false,
     fallbackPlacements: ['top', 'right', 'bottom', 'left'],
-    boundary: 'clippingParents',
+    boundary: 'clippinGfarents',
     customClass: '',
     sanitize: true,
     sanitizeFn: null,

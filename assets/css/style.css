@@ -1,6 +1,6 @@
 /**
-* Template Name: Gp - v4.3.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+* Template Name: GL - v4.3.0
+* Template URL: https://bootstrapmade.com/GL-free-multipurpose-html-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -419,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
-  color: #fff;
+  color: #f3ad22;
   font-family: "Poppins", sans-serif;
 }
 
@@ -731,20 +731,20 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# experiences
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+.experiences .experiences-item {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.experiences #experiences-flters {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
 }
 
-.portfolio #portfolio-flters li {
+.experiences #experiences-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 8px 15px 10px 15px;
@@ -758,16 +758,16 @@ section {
   border-radius: 3px;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.experiences #experiences-flters li:hover, .experiences #experiences-flters li.filter-active {
   color: #151515;
   background: #ffc451;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.experiences #experiences-flters li:last-child {
   margin-right: 0;
 }
 
-.portfolio .portfolio-wrap {
+.experiences .experiences-wrap {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
@@ -775,7 +775,7 @@ section {
   background: rgba(21, 21, 21, 0.6);
 }
 
-.portfolio .portfolio-wrap::before {
+.experiences .experiences-wrap::before {
   content: "";
   background: rgba(21, 21, 21, 0.6);
   position: absolute;
@@ -788,11 +788,11 @@ section {
   opacity: 0;
 }
 
-.portfolio .portfolio-wrap img {
+.experiences .experiences-wrap img {
   transition: all ease-in-out 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-info {
+.experiences .experiences-wrap .experiences-info {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -808,13 +808,13 @@ section {
   padding: 20px;
 }
 
-.portfolio .portfolio-wrap .portfolio-info h4 {
+.experiences .experiences-wrap .experiences-info h4 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
 }
 
-.portfolio .portfolio-wrap .portfolio-info p {
+.experiences .experiences-wrap .experiences-info p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   text-transform: uppercase;
@@ -823,12 +823,12 @@ section {
   font-style: italic;
 }
 
-.portfolio .portfolio-wrap .portfolio-links {
+.experiences .experiences-wrap .experiences-links {
   text-align: center;
   z-index: 4;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a {
+.experiences .experiences-wrap .experiences-links a {
   color: #fff;
   margin: 0 5px 0 0;
   font-size: 28px;
@@ -836,39 +836,39 @@ section {
   transition: 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.experiences .experiences-wrap .experiences-links a:hover {
   color: #ffc451;
 }
 
-.portfolio .portfolio-wrap:hover::before {
+.experiences .experiences-wrap:hover::before {
   opacity: 1;
 }
 
-.portfolio .portfolio-wrap:hover img {
+.experiences .experiences-wrap:hover img {
   transform: scale(1.2);
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-info {
+.experiences .experiences-wrap:hover .experiences-info {
   opacity: 1;
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# experiences Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.experiences-details {
   padding-top: 40px;
 }
 
-.portfolio-details .portfolio-details-slider img {
+.experiences-details .experiences-details-slider img {
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.experiences-details .experiences-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.experiences-details .experiences-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -876,16 +876,16 @@ section {
   border: 1px solid #ffc451;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.experiences-details .experiences-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #ffc451;
 }
 
-.portfolio-details .portfolio-info {
+.experiences-details .experiences-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(21, 21, 21, 0.08);
 }
 
-.portfolio-details .portfolio-info h3 {
+.experiences-details .experiences-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -893,60 +893,60 @@ section {
   border-bottom: 1px solid #eee;
 }
 
-.portfolio-details .portfolio-info ul {
+.experiences-details .experiences-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.experiences-details .experiences-info ul li + li {
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
+.experiences-details .experiences-description {
   padding-top: 30px;
 }
 
-.portfolio-details .portfolio-description h2 {
+.experiences-details .experiences-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.experiences-details .experiences-description p {
   padding: 0;
 }
 
 /*--------------------------------------------------------------
-# Counts
+# experiences
 --------------------------------------------------------------*/
-.counts .content {
+.experiences .content {
   padding: 30px 0;
 }
 
-.counts .content h3 {
+.experiences .content h3 {
   font-weight: 700;
   font-size: 34px;
   color: #151515;
 }
 
-.counts .content p {
+.experiences .content p {
   margin-bottom: 0;
 }
 
-.counts .content .count-box {
+.experiences .content .experiences-box {
   padding: 20px 0;
   width: 100%;
 }
 
-.counts .content .count-box i {
+.experiences .content .experiences-box i {
   display: block;
   font-size: 36px;
   color: #ffc451;
   float: left;
 }
 
-.counts .content .count-box span {
+.experiences .content .experiences-box span {
   font-size: 36px;
   line-height: 30px;
   display: block;
@@ -955,7 +955,7 @@ section {
   margin-left: 50px;
 }
 
-.counts .content .count-box p {
+.experiences .content .experiences-box p {
   padding: 15px 0 0 0;
   margin: 0 0 0 50px;
   font-family: "Raleway", sans-serif;
@@ -963,7 +963,7 @@ section {
   color: #3b3b3b;
 }
 
-.counts .content .count-box a {
+.experiences .content .experiences-box a {
   font-weight: 600;
   display: block;
   margin-top: 20px;
@@ -973,27 +973,27 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.counts .content .count-box a:hover {
+.experiences .content .experiences-box a:hover {
   color: #626262;
 }
 
-.counts .image {
-  background: url("../img/counts-img.jpg") center center no-repeat;
+.experiences .image {
+  background: url("../img/experiences-img.jpg") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
 
 @media (max-width: 991px) {
-  .counts .image {
+  .experiences .image {
     text-align: center;
   }
-  .counts .image img {
+  .experiences .image img {
     max-width: 80%;
   }
 }
 
 @media (max-width: 667px) {
-  .counts .image img {
+  .experiences .image img {
     max-width: 100%;
   }
 }

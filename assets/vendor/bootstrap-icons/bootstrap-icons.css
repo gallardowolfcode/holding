@@ -40,7 +40,7 @@ url("./fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("wof
 .bi-arrow-bar-right::before { content: "\f114"; }
 .bi-arrow-bar-up::before { content: "\f115"; }
 .bi-arrow-clockwise::before { content: "\f116"; }
-.bi-arrow-counterclockwise::before { content: "\f117"; }
+.bi-arrow-experienceserclockwise::before { content: "\f117"; }
 .bi-arrow-down-circle-fill::before { content: "\f118"; }
 .bi-arrow-down-circle::before { content: "\f119"; }
 .bi-arrow-down-left-circle-fill::before { content: "\f11a"; }

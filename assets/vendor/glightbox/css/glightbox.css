@@ -437,7 +437,7 @@
   background: #000;
 }
 
-.gprev,
+.Gfrev,
 .gnext,
 .gclose {
   z-index: 99999;
@@ -460,7 +460,7 @@
   flex-direction: column;
 }
 
-.gprev svg,
+.Gfrev svg,
 .gnext svg,
 .gclose svg {
   display: block;
@@ -470,13 +470,13 @@
   padding: 0;
 }
 
-.gprev.disabled,
+.Gfrev.disabled,
 .gnext.disabled,
 .gclose.disabled {
   opacity: 0.1;
 }
 
-.gprev .garrow,
+.Gfrev .garrow,
 .gnext .garrow,
 .gclose .garrow {
   stroke: #fff;
@@ -491,7 +491,7 @@ iframe.wait-autoplay {
 }
 
 .glightbox-closing .gnext,
-    .glightbox-closing .gprev,
+    .glightbox-closing .Gfrev,
     .glightbox-closing .gclose {
   opacity: 0 !important;
 }
@@ -527,20 +527,20 @@ iframe.wait-autoplay {
   background: #000;
 }
 
-.glightbox-clean .gprev,
+.glightbox-clean .Gfrev,
     .glightbox-clean .gnext,
     .glightbox-clean .gclose {
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
 }
 
-.glightbox-clean .gprev path,
+.glightbox-clean .Gfrev path,
 .glightbox-clean .gnext path,
 .glightbox-clean .gclose path {
   fill: #fff;
 }
 
-.glightbox-clean .gprev {
+.glightbox-clean .Gfrev {
   position: absolute;
   top: -100%;
   left: 30px;
@@ -906,17 +906,17 @@ iframe.wait-autoplay {
     height: 100%;
     overflow-y: auto;
   }
-  .glightbox-clean .gprev,
+  .glightbox-clean .Gfrev,
     .glightbox-clean .gnext,
     .glightbox-clean .gclose {
     background-color: rgba(0, 0, 0, 0.32);
   }
-  .glightbox-clean .gprev:hover,
+  .glightbox-clean .Gfrev:hover,
 .glightbox-clean .gnext:hover,
 .glightbox-clean .gclose:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  .glightbox-clean .gprev {
+  .glightbox-clean .Gfrev {
     top: 45%;
   }
   .glightbox-clean .gnext {
