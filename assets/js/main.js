@@ -1,6 +1,6 @@
 /**
-* Template Name: GL - v4.3.0
-* Template URL: https://bootstrapmade.com/GL-free-multipurpose-html-bootstrap-template/
+* Template Name: AE - v4.3.0
+* Template URL: https://bootstrapmade.com/AE-free-multipurpose-html-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -233,7 +233,7 @@
   /**
    * Initiate experiences lightbox 
    */
-  const experiencesLightbox = GLightbox({
+  const experiencesLightbox = AEightbox({
     selector: '.experiences-lightbox'
   });
 

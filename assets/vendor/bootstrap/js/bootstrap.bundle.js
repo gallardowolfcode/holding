@@ -882,7 +882,7 @@
   const EVENT_KEY$a = `.${DATA_KEY$a}`;
   const DATA_API_KEY$7 = '.data-api';
   const CLASS_NAME_ACTIVE$3 = 'active';
-  const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="button"]';
+  const SELECTOR_DATA_TOGAEE$5 = '[data-bs-toggle="button"]';
   const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$a}${DATA_API_KEY$7}`;
   /**
    * ------------------------------------------------------------------------
@@ -925,9 +925,9 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$5, event => {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGAEE$5, event => {
     event.preventDefault();
-    const button = event.target.closest(SELECTOR_DATA_TOGGLE$5);
+    const button = event.target.closest(SELECTOR_DATA_TOGAEE$5);
     let data = Data.get(button, DATA_KEY$a);
 
     if (!data) {
@@ -1614,7 +1614,7 @@
   const WIDTH = 'width';
   const HEIGHT = 'height';
   const SELECTOR_ACTIVES = '.show, .collapsing';
-  const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="collapse"]';
+  const SELECTOR_DATA_TOGAEE$4 = '[data-bs-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -1626,8 +1626,8 @@
       super(element);
       this._isTransitioning = false;
       this._config = this._getConfig(config);
-      this._triggerArray = SelectorEngine.find(`${SELECTOR_DATA_TOGGLE$4}[href="#${this._element.id}"],` + `${SELECTOR_DATA_TOGGLE$4}[data-bs-target="#${this._element.id}"]`);
-      const toggleList = SelectorEngine.find(SELECTOR_DATA_TOGGLE$4);
+      this._triggerArray = SelectorEngine.find(`${SELECTOR_DATA_TOGAEE$4}[href="#${this._element.id}"],` + `${SELECTOR_DATA_TOGAEE$4}[data-bs-target="#${this._element.id}"]`);
+      const toggleList = SelectorEngine.find(SELECTOR_DATA_TOGAEE$4);
 
       for (let i = 0, len = toggleList.length; i < len; i++) {
         const elem = toggleList[i];
@@ -1831,7 +1831,7 @@
         parent
       } = this._config;
       parent = getElement(parent);
-      const selector = `${SELECTOR_DATA_TOGGLE$4}[data-bs-parent="${parent}"]`;
+      const selector = `${SELECTOR_DATA_TOGAEE$4}[data-bs-parent="${parent}"]`;
       SelectorEngine.find(selector, parent).forEach(element => {
         const selected = getElementFromSelector(element);
 
@@ -1896,7 +1896,7 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$4, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGAEE$4, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.target.tagName === 'A' || event.delegateTarget && event.delegateTarget.tagName === 'A') {
       event.preventDefault();
@@ -3724,7 +3724,7 @@
   const CLASS_NAME_DROPEND = 'dropend';
   const CLASS_NAME_DROPSTART = 'dropstart';
   const CLASS_NAME_NAVBAR = 'navbar';
-  const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]';
+  const SELECTOR_DATA_TOGAEE$3 = '[data-bs-toggle="dropdown"]';
   const SELECTOR_MENU = '.dropdown-menu';
   const SELECTOR_NAVBAR_NAV = '.navbar-nav';
   const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
@@ -4062,7 +4062,7 @@
         return;
       }
 
-      const toggles = SelectorEngine.find(SELECTOR_DATA_TOGGLE$3);
+      const toggles = SelectorEngine.find(SELECTOR_DATA_TOGAEE$3);
 
       for (let i = 0, len = toggles.length; i < len; i++) {
         const context = Data.get(toggles[i], DATA_KEY$7);
@@ -4130,7 +4130,7 @@
         return;
       }
 
-      const getToggleButton = () => this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0];
+      const getToggleButton = () => this.matches(SELECTOR_DATA_TOGAEE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGAEE$3)[0];
 
       if (event.key === ESCAPE_KEY$2) {
         getToggleButton().focus();
@@ -4159,11 +4159,11 @@
    */
 
 
-  EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$3, Dropdown.dataApiKeydownHandler);
+  EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGAEE$3, Dropdown.dataApiKeydownHandler);
   EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
   EventHandler.on(document, EVENT_CLICK_DATA_API$3, Dropdown.clearMenus);
   EventHandler.on(document, EVENT_KEYUP_DATA_API, Dropdown.clearMenus);
-  EventHandler.on(document, EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$3, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGAEE$3, function (event) {
     event.preventDefault();
     Dropdown.dropdownInterface(this);
   });
@@ -4424,7 +4424,7 @@
   const CLASS_NAME_STATIC = 'modal-static';
   const SELECTOR_DIALOG = '.modal-dialog';
   const SELECTOR_MODAL_BODY = '.modal-body';
-  const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
+  const SELECTOR_DATA_TOGAEE$2 = '[data-bs-toggle="modal"]';
   const SELECTOR_DATA_DISMISS$2 = '[data-bs-dismiss="modal"]';
   /**
    * ------------------------------------------------------------------------
@@ -4776,7 +4776,7 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$2, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGAEE$2, function (event) {
     const target = getElementFromSelector(this);
 
     if (['A', 'AREA'].includes(this.tagName)) {
@@ -4846,7 +4846,7 @@
   const EVENT_CLICK_DISMISS$1 = `click.dismiss${EVENT_KEY$5}`;
   const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$5}`;
   const SELECTOR_DATA_DISMISS$1 = '[data-bs-dismiss="offcanvas"]';
-  const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
+  const SELECTOR_DATA_TOGAEE$1 = '[data-bs-toggle="offcanvas"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -5029,7 +5029,7 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE$1, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGAEE$1, function (event) {
     const target = getElementFromSelector(this);
 
     if (['A', 'AREA'].includes(this.tagName)) {
@@ -6057,7 +6057,7 @@
   const SELECTOR_NAV_ITEMS = '.nav-item';
   const SELECTOR_LIST_ITEMS = '.list-group-item';
   const SELECTOR_DROPDOWN$1 = '.dropdown';
-  const SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
+  const SELECTOR_DROPDOWN_TOGAEE$1 = '.dropdown-toggle';
   const METHOD_OFFSET = 'offset';
   const METHOD_POSITION = 'position';
   /**
@@ -6209,7 +6209,7 @@
       const link = SelectorEngine.findOne(queries.join(','));
 
       if (link.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
-        SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE$1, link.closest(SELECTOR_DROPDOWN$1)).classList.add(CLASS_NAME_ACTIVE$1);
+        SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGAEE$1, link.closest(SELECTOR_DROPDOWN$1)).classList.add(CLASS_NAME_ACTIVE$1);
         link.classList.add(CLASS_NAME_ACTIVE$1);
       } else {
         // Set triggered link as active
@@ -6300,8 +6300,8 @@
   const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
   const SELECTOR_ACTIVE = '.active';
   const SELECTOR_ACTIVE_UL = ':scope > li > .active';
-  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]';
-  const SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
+  const SELECTOR_DATA_TOGAEE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]';
+  const SELECTOR_DROPDOWN_TOGAEE = '.dropdown-toggle';
   const SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active';
   /**
    * ------------------------------------------------------------------------
@@ -6414,7 +6414,7 @@
         const dropdownElement = element.closest(SELECTOR_DROPDOWN);
 
         if (dropdownElement) {
-          SelectorEngine.find(SELECTOR_DROPDOWN_TOGGLE, dropdownElement).forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE));
+          SelectorEngine.find(SELECTOR_DROPDOWN_TOGAEE, dropdownElement).forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE));
         }
 
         element.setAttribute('aria-expanded', true);
@@ -6448,7 +6448,7 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGAEE, function (event) {
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
