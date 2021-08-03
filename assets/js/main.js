@@ -1,9 +1,3 @@
-/**
-* Template Name: AE - v4.3.0
-* Template URL: https://bootstrapmade.com/AE-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -198,36 +192,6 @@
         spaceBetween: 120
       }
     }
-  });
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let experiencesContainer = select('.experiences-container');
-    if (experiencesContainer) {
-      let experiencesIsotope = new Isotope(experiencesContainer, {
-        itemSelector: '.experiences-item'
-      });
-
-      let experiencesFilters = select('#experiences-flters li', true);
-
-      on('click', '#experiences-flters li', function(e) {
-        e.preventDefault();
-        experiencesFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        experiencesIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        experiencesIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
   });
 
   /**
